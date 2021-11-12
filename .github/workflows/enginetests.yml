@@ -16,7 +16,7 @@ jobs:
     - name: Create build directory
       run: mkdir build
     - name: cmake build
-      run: cmake -B build -H .
+      run: cmake -Bbuild -H.
     - name: cmake make
       run: cmake --build build/ --target all
     - name: Execute tests
