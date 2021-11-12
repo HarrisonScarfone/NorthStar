@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
+    - name: Create build directory
+      run: mkdir build
     - name: Build tests with CMake
       run: cmake --build build --config Debug --target all -j 14 --
     - name: Execute tests
       run: cd build/test && ./NorthStar_test
-    
