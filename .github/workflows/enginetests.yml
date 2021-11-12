@@ -16,6 +16,6 @@ jobs:
     - name: Create build directory
       run: mkdir build
     - name: Build tests with CMake
-      run: cmake --build build --config Debug --target all -j 14 --
+      run: cmake build .
     - name: Execute tests
       run: cd build/test && ./NorthStar_test
