@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build tests with CMake
+      run: cmake --build build --config Debug --target all -j 14 --
+    - name: Execute tests
+      run: cd build/test && ./NorthStar_test
+    
