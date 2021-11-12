@@ -18,4 +18,4 @@ jobs:
     - name: Build tests with CMake
       run: cmake build .
     - name: Execute tests
-      run: cd build/test && ./NorthStar_test
+      run: cd /home/runner/work/NorthStar/NorthStar/build/test && ./NorthStar_test
