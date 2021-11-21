@@ -1,8 +1,8 @@
 #include <iostream>
 
-int main() {
-    std::cout << "Hello Workflow Testing!\n";
-    // std::cout << BuildSetupTest::addTwoInts(2,2) << "\n";
+#include "gamestate.h"
 
-    return 0;
+int main() {
+    Gamestate::Position position = Gamestate::Initializers::InitNewGameState();
+    Gamestate::Output::PrintGamestate(position);
 }
