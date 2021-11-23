@@ -1,6 +1,11 @@
 name: Formatting Check
 
-on: [pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   formatting-check:
     name: using .clang-format
