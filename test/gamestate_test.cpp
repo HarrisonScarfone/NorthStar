@@ -8,6 +8,7 @@
 // is assumed to create the correct starting position. Can be tested later if deemed necessary.
 // Testing of PrintPosition is also omitted
 
+namespace {
 TEST(HasPieceAtBinaryLocationTest, BasicAssertions) {
     // use A file for piece locations and check a square in A file
     uint64_t piece_64bit_locations = 0x101010101010101L;
@@ -36,3 +37,4 @@ TEST(InitPositionWithEnpassantTest, BasicAssertions) {
 
     EXPECT_EQ(position.enpassant, 131072);
 }
+}  // namespace

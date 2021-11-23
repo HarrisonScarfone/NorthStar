@@ -15,9 +15,6 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-# set options, will currently default to a src build
-option(SOME_FUNCTIONS "some functions for workflow testing" ON)
-
 include_directories(src)
 
 add_subdirectory(src)

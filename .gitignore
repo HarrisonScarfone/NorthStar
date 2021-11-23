@@ -2,3 +2,5 @@ build/*
 .vscode/*
 
 CMakeFiles/
+
+.notes.txt

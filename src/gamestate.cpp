@@ -223,5 +223,4 @@ namespace Helpers {
         return (piece_64bit_locations & location_to_check) > 0;
     }
 }  // namespace Helpers
-
 }  // namespace Gamestate

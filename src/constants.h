@@ -47,6 +47,7 @@ const uint64_t AntiDiagonalMasks[]{0x80L,
                                    0x402010000000000L,
                                    0x201000000000000L,
                                    0x100000000000000L};
+
 std::map<uint64_t, int> uint_to_int = {{1, 0},
                                        {2, 1},
                                        {4, 2},
