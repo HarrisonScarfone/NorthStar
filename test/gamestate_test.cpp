@@ -9,7 +9,7 @@
 // Testing of PrintPosition is also omitted
 
 namespace {
-TEST(HasPieceAtBinaryLocationTest, BasicAssertions) {
+TEST(GamestateTest, location_has_piece_and_returns_true) {
     // use A file for piece locations and check a square in A file
     uint64_t piece_64bit_locations = 0x101010101010101L;
     uint64_t location_to_check = 1;
@@ -17,7 +17,7 @@ TEST(HasPieceAtBinaryLocationTest, BasicAssertions) {
     EXPECT_TRUE(Gamestate::Helpers::PieceUint64HasPieceAtLocation(piece_64bit_locations, location_to_check));
 }
 
-TEST(InitStartPositionFromFenStringTest, BasicAssertions) {
+TEST(GamestateTest, starting_position_initializes_properly_from_fen_string) {
     Gamestate::Position starting_position = Gamestate::Initializers::StartingPosition();
     Gamestate::Position starting_position_from_fen_string =
         Gamestate::Initializers::PositionFromFenString("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
@@ -29,7 +29,7 @@ TEST(InitStartPositionFromFenStringTest, BasicAssertions) {
     EXPECT_EQ(starting_position.fullmove_clock, starting_position_from_fen_string.fullmove_clock);
 }
 
-TEST(InitPositionWithEnpassantTest, BasicAssertions) {
+TEST(GamestateTest, position_initializes_properly_from_fen_string_with_hyphon) {
     // b6 -> 17 -> 131072 (uint64_t)
     std::string fen_string_under_test = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq b6 0 1";
 
