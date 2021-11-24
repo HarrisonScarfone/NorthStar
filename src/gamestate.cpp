@@ -118,7 +118,7 @@ namespace Initializers {
             }
         }
 
-        // fourth token handles en passant rights
+        // fourth token handles en passant right
         // set our enpassant board to high in the location given in the token
         // example: a1 -> sets location 0 to high (0 - 63)
         std::string enpassant_location = fen_tokens.at(3);
